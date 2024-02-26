@@ -1,4 +1,5 @@
-//¿ÉÄÜĞèÒª#define _CRT_SECURE_NO_WARNINGS 1
+//å¯èƒ½éœ€è¦#define _CRT_SECURE_NO_WARNINGS 1
+#pragma once
 #include<iostream>
 #include<string>
 #include<vector>
@@ -15,7 +16,7 @@ public:
     TreeNode(int val) : val(val), left(NULL), right(NULL) {};
     TreeNode(int val, TreeNode* left, TreeNode* right) :val(val), left(left), right(right) {};
     void createByLevel(char* str)
-        //×¢Òâ£º¸Ãº¯Êı½«´«ÈëµÄ×Ö·û´®µÄ','¸ÄÎª'\0'
+        //æ³¨æ„ï¼šè¯¥å‡½æ•°å°†ä¼ å…¥çš„å­—ç¬¦ä¸²çš„','æ”¹ä¸º'\0'
     {
         if (*str == 0) return;
         vector<char*>nums;
@@ -118,7 +119,7 @@ public:
         return;
     }
     void createByLevel(char** nums, int numsSize)
-        //´Ë´¦²»ÄÜÖ±½Ó´«Èë¶şÎ¬Êı×éÃû£¬ÒòÎª¶şÎ¬Êı×éÃûÊÇÒ»¸öÊı×éÖ¸Õë£¬±ØĞëÍ¨¹ımalloc»ònewµÄ·½Ê½¼ä½Ó¿ª±Ù×Ö·û´®Êı×é
+        //æ­¤å¤„ä¸èƒ½ç›´æ¥ä¼ å…¥äºŒç»´æ•°ç»„åï¼Œå› ä¸ºäºŒç»´æ•°ç»„åæ˜¯ä¸€ä¸ªæ•°ç»„æŒ‡é’ˆï¼Œå¿…é¡»é€šè¿‡mallocæˆ–newçš„æ–¹å¼é—´æ¥å¼€è¾Ÿå­—ç¬¦ä¸²æ•°ç»„
     {
         if (numsSize == 0) return;
         queue<TreeNode*>q;
@@ -147,7 +148,7 @@ public:
         return;
     }
     void printByLevel(bool levelEndl = false, bool printNull = true)
-        //²ãĞò´òÓ¡£¬levelEndl±íÊ¾ÊÇ·ñ»»ĞĞ£¬printNull±íÊ¾ÊÇ·ñ´òÓ¡NULLÖ¸Õë
+        //å±‚åºæ‰“å°ï¼ŒlevelEndlè¡¨ç¤ºæ˜¯å¦æ¢è¡Œï¼ŒprintNullè¡¨ç¤ºæ˜¯å¦æ‰“å°NULLæŒ‡é’ˆ
     {
         queue<TreeNode*>q;
         q.push(this);
